@@ -1,0 +1,9 @@
+DEPENDENCIES
+  chef-dk
+  vim
+
+GRAPH
+  chef-dk (3.0.0)
+    dmg (~> 2.2)
+  dmg (2.2.2)
+  vim (1.1.2)
