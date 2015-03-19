@@ -47,3 +47,45 @@ Make sure knife commands work:
 
 Should return some users instead of some error message
 
+
+Setup base repo:
+
+    cd ~
+    chef generate repo chef-repo
+    cd chef-repo
+    git init .
+
+Download a cookbook from the Opscode Chef site:
+
+    cd ~
+    knife cookbook site download vim
+    cd chef-repo/cookbooks
+    tar -zxvf ~/vim*.tar.gz
+
+Upload the VIM cookbook to your local Chef server:
+
+    knife upload --chef-repo-path ~/chef-repo cookbooks/
+
+
+
+Setup your Chef-client (as root):
+
+    cd /etc/chef
+    cp /home/vagrant/.chef/chef-validator.pem /etc/chef/validation.pem
+    cp -aR /home/vagrant/.chef/trusted_keys /etc/chef/
+
+Create your base client.rb file for Chef-client to use:
+
+    vim /etc/chef/client.rb
+
+Contents:
+
+````
+log_level                :info
+log_location             STDOUT
+chef_server_url          'https://chefserver.test.dev:443'
+````
+
+
+
+
