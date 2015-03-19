@@ -16,7 +16,6 @@
     cd !$
     git clone git@github.com:kholloway/cheflab.git
     cd cheflab
-    vagrant init chef/centos-6.6
     vagrant up
 
 You can now ```vagrant ssh``` to your instance and start playing around with Chef.
