@@ -6,9 +6,10 @@
     brew cask install vagrant
     brew cask install chefdk
 
-#### Install Vagrant plugin for Berkshelf:
+#### Install Vagrant plugin for Berkshelf and host name manager:
 
     vagrant plugin install vagrant-berkshelf
+    vagrant plugin install vagrant-hostmanager
 
 #### Clone this repo and vagrant up:
 
