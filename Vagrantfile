@@ -1,7 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 #
-
 Vagrant.configure(2) do |config|
   config.vm.box = "chef/centos-6.6"
 
@@ -33,7 +32,7 @@ Vagrant.configure(2) do |config|
     node.vm.box = "chef/centos-6.6"
     config.vm.provision "chef_solo" do |chef|
       chef.json = {
-        :chef-server => { :api_fqdn => "chefserver.test.dev" }
+        "chef-server" => { "api_fqdn" => "chefserver.test.dev" }
       }
       chef.version = "latest"
       config.berkshelf.enabled = true
