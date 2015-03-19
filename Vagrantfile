@@ -14,7 +14,6 @@ Vagrant.configure(2) do |config|
   # You should end up with Chef installed on the VM (version latest) and VIM package installed via Yum in this case
 
   config.vm.network "private_network", type: "dhcp"
-  config.ssh.private_key_path = "~/.ssh/id_rsa"
   config.ssh.forward_agent = true
 
   config.vm.define "chefserver" do |chefserver|
