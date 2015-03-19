@@ -1,9 +1,11 @@
 DEPENDENCIES
   chef-dk
+  chef-server (= 2.1.6)
   vim
 
 GRAPH
   chef-dk (3.0.0)
     dmg (~> 2.2)
+  chef-server (2.1.6)
   dmg (2.2.2)
   vim (1.1.2)
