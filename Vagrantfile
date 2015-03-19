@@ -2,6 +2,8 @@
 # vi: set ft=ruby :
 #
 Vagrant.require_plugin "vagrant-berkshelf"
+Vagrant.require_plugin "vagrant-chef-zero"
+Vagrant.require_plugin "vagrant-omnibus"
 Vagrant.require_plugin "vagrant-hostmanager"
 
 Vagrant.configure(2) do |config|
